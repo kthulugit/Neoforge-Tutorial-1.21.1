@@ -1,6 +1,7 @@
 package net.kthulu.mytutorialmod.item;
 
 import net.kthulu.mytutorialmod.MyTutorialMod;
+import net.kthulu.mytutorialmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,9 +19,12 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> FLINT_ITEMS_TAB = CREATIVE_MODE_TAB.register("flint_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FLINT_AXE.get()))
                     .title(Component.translatable( "creativetab.mytutorialmod.flint_items"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.FLINT_AXE);
+                        output.accept(ModItems.FLINT_PICKAXE);
+                        output.accept(ModBlocks.FLINT_BLOCK);
 
-
-                    .build());
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

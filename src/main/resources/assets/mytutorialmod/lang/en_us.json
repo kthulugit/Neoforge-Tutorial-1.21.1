@@ -2,6 +2,11 @@
   "item.mytutorialmod.flint_axe": "Flint Axe",
   "item.mytutorialmod.flint_pickaxe": "Flint Pickaxe",
 
-  "block.mytutorialmod.flint_block": "Block of Flint"
+  "block.mytutorialmod.flint_block": "Block of Flint",
+
+  "creativetab.mytutorialmod.flint_items": "Flint Items",
+
+  "tooltip.mytutorialmod.flint_pickaxe": "Hold §eShift§r for more Information",
+  "tooltip.mytutorialmod.flint_pickaxe.shift_down": "This tool can be used to gather stone."
 
 }
